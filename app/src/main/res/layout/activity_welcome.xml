@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:id="@+id/welcome_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/username"
+        android:textSize="18dp"
+        android:id="@+id/welcome_username"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/welcome_new_list_button"
+            android:text="@string/new_list"
+            android:layout_weight="1"
+            android:backgroundTint="@color/teal_200"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/welcome_see_my_list"
+            android:text="@string/see_my_list"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:backgroundTint="@color/teal_200"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/welcome_see_shared_lists"
+            android:text="@string/see_shared_lists"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:backgroundTint="@color/teal_200"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/welcome_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:layout_gravity="bottom|center"
+        android:id="@+id/welcome_home_button"/>
+
+</LinearLayout>
